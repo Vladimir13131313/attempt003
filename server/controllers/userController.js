@@ -19,7 +19,7 @@ class userController {
 
         if(checkUser) {
             return res.json({
-                auth: false,
+                nonAuth: true,
                 message: "This user already exists"
             })
         } else {
@@ -52,13 +52,13 @@ class userController {
                 })
             } else {
                 return res.json({
-                    auth: false,
+                    nonAuth: true,
                     message: "Passwords don't match"
                 })
             }
         } else {
             return res.json({
-                auth: false,
+                nonAuth: true,
                 message: "This user has not been found"
             })
         }
